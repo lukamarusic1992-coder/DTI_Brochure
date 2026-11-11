@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat A4 Insert - Premium Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e8e8e8;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .page {
+            aspect-ratio: 210 / 297;
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            margin: 20px auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            page-break-after: always;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ===== FRONT PAGE ===== */
+        .front {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: white;
+            position: relative;
+        }
+
+        /* Top color block */
+        .front-header-block {
+            background: #112D3D;
+            color: white;
+            padding: 18mm 18mm 12mm 18mm;
+            position: relative;
+        }
+
+        .theme-label {
+            font-size: 7px;
+            color: #4168B7;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8mm;
+        }
+
+        .headline {
+            font-size: 38px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 0;
+        }
+
+        /* Hero image area - large */
+        .hero-image {
+            width: 100%;
+            flex: 1;
+            background: #F2F4F6;
+            border: 2px dashed #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 11px;
+            text-align: center;
+            padding: 15mm;
+            border-radius: 0;
+            border: none;
+        }
+
+        /* Bottom section with accent bar */
+        .front-bottom {
+            background: white;
+            padding: 14mm 18mm 18mm 18mm;
+            border-top: 4mm solid #C62828;
+            position: relative;
+        }
+
+        .intro-line {
+            font-size: 11px;
+            color: #252B30;
+            margin-bottom: 12mm;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .problems-section h2 {
+            font-size: 11px;
+            color: #112D3D;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8mm;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6mm;
+        }
+
+        .problem-point {
+            border-left: 3px solid #C62828;
+            padding-left: 6mm;
+        }
+
+        .problem-point h4 {
+            font-size: 8px;
+            color: #C62828;
+            font-weight: 700;
+            margin-bottom: 2mm;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .problem-point p {
+            font-size: 7px;
+            color: #252B30;
+            line-height: 1.3;
+        }
+
+        /* ===== BACK PAGE ===== */
+        .back {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: white;
+        }
+
+        /* Featured Project - DOMINANT */
+        .featured-project-wrapper {
+            background: #F2F4F6;
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 0;
+            align-items: stretch;
+        }
+
+        .project-image {
+            background: white;
+            border: 2px dashed #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 10px;
+            text-align: center;
+            padding: 15mm;
+        }
+
+        .project-content {
+            padding: 18mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: white;
+            position: relative;
+        }
+
+        .project-header {
+            border-bottom: 3px solid #C62828;
+            padding-bottom: 8mm;
+            margin-bottom: 10mm;
+        }
+
+        .project-header h3 {
+            font-size: 16px;
+            color: #112D3D;
+            font-weight: 700;
+            margin-bottom: 4mm;
+        }
+
+        .project-meta {
+            font-size: 7px;
+            color: #4168B7;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+
+        .project-story {
+            font-size: 8px;
+            color: #252B30;
+            line-height: 1.5;
+        }
+
+        .project-story strong {
+            color: #C62828;
+            font-weight: 700;
+        }
+
+        .project-result {
+            font-size: 8px;
+            color: #112D3D;
+            font-weight: 600;
+            margin-top: 8mm;
+            padding: 8mm;
+            border-left: 3px solid #C62828;
+            background: #F2F4F6;
+        }
+
+        /* Benefits at bottom */
+        .benefits-footer {
+            background: white;
+            padding: 12mm 18mm;
+            border-top: 1px solid #E8E8E8;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10mm;
+        }
+
+        .benefit {
+            display: flex;
+            gap: 5mm;
+            align-items: flex-start;
+        }
+
+        .benefit-check {
+            color: #C62828;
+            font-weight: 700;
+            font-size: 11px;
+            flex-shrink: 0;
+            margin-top: 1mm;
+        }
+
+        .benefit-text {
+            font-size: 7.5px;
+            color: #252B30;
+            line-height: 1.4;
+        }
+
+        .benefit-text strong {
+            color: #112D3D;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 2mm;
+        }
+
+        /* CTA Section */
+        .cta-footer {
+            background: #112D3D;
+            color: white;
+            padding: 14mm 18mm;
+            text-align: center;
+            border-top: 4mm solid #C62828;
+        }
+
+        .cta-text {
+            font-size: 10px;
+            margin-bottom: 6mm;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        .contact-details {
+            font-size: 8px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== FRONT PAGE ===== -->
+    <div class="page front">
+        <div class="front-header-block">
+            <div class="theme-label">Heat & Thermal Discomfort</div>
+            <h1 class="headline">Is heat affecting your facility?</h1>
+        </div>
+
+        <div class="hero-image">
+            [HERO IMAGE: Wide industrial facility photo showing heat environment]
+        </div>
+
+        <div class="front-bottom">
+            <p class="intro-line">Excessive internal temperatures impact worker safety, equipment efficiency, and operational productivity.</p>
+
+            <div class="problems-section">
+                <h2>Key Issues</h2>
+                <div class="problems-grid">
+                    <div class="problem-point">
+                        <h4>Worker Safety</h4>
+                        <p>Heat stress hazard affecting personnel health and productivity</p>
+                    </div>
+                    <div class="problem-point">
+                        <h4>Equipment Efficiency</h4>
+                        <p>Poor ventilation reduces equipment lifespan and increases costs</p>
+                    </div>
+                    <div class="problem-point">
+                        <h4>Operational Impact</h4>
+                        <p>Heat above 25°C reduces output and accelerates degradation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== BACK PAGE ===== -->
+    <div class="page back">
+        <div class="featured-project-wrapper">
+            <div class="project-image">
+                [PROJECT IMAGE: BlueScope Steel MCL7 facility]
+            </div>
+            <div class="project-content">
+                <div class="project-header">
+                    <h3>BlueScope Steel MCL7</h3>
+                    <div class="project-meta">Erskine Park, NSW | Steel Manufacturing | Large-span facility</div>
+                </div>
+
+                <div class="project-story">
+                    <strong>Challenge:</strong> Extreme heat load impacting worker safety and equipment efficiency.
+                    <br><br>
+                    <strong>Response:</strong> 2 series E ridge vents with passive ventilation system.
+                    <br><br>
+                    <strong>Outcome:</strong> Internal temperatures reduced by 10°C. Zero ongoing operating costs.
+                </div>
+
+                <div class="project-result">
+                    ✓ Resolved extreme heat load using passive natural ventilation
+                </div>
+            </div>
+        </div>
+
+        <div class="benefits-footer">
+            <div class="benefit">
+                <div class="benefit-check">✓</div>
+                <div class="benefit-text">
+                    <strong>10-15°C</strong>
+                    Temperature reduction on average
+                </div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-check">✓</div>
+                <div class="benefit-text">
+                    <strong>30-40%</strong>
+                    Energy cost savings annually
+                </div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-check">✓</div>
+                <div class="benefit-text">
+                    <strong>Zero Energy</strong>
+                    Passive system, no running costs
+                </div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-check">✓</div>
+                <div class="benefit-text">
+                    <strong>Minimal Maintenance</strong>
+                    No mechanical parts to maintain
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-footer">
+            <div class="cta-text">Ready to discuss your facility's ventilation requirements?</div>
+            <div class="contact-details">
+                <strong>Airocle</strong> | Natural Ventilation Solutions<br>
+                www.airocle.com.au | hello@airocle.com.au | +61 2 XXXX XXXX
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
