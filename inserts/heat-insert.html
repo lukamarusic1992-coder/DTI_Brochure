@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Problem - A4 One-Pager (Double-Sided)</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* A4 Print Specific Styles */
+        body {
+            background: #f0f0f0;
+            padding: 10px;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            margin: 10px auto;
+            overflow: hidden;
+            page-break-after: always;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Front Page */
+        .front {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100%;
+        }
+
+        .front-hero {
+            background: var(--color-heat);
+            color: white;
+            padding: 15mm 15mm 10mm 15mm;
+            text-align: center;
+            flex: 0 0 auto;
+        }
+
+        .front-hero h1 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 5mm;
+        }
+
+        .front-hero p {
+            font-size: 10px;
+            margin-bottom: 8mm;
+            opacity: 0.95;
+        }
+
+        .front-cta {
+            background: white;
+            color: var(--color-heat);
+            padding: 5mm 12mm;
+            font-size: 9px;
+            font-weight: bold;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        .front-image {
+            flex: 1;
+            background: #ddd;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 9px;
+            padding: 20mm 15mm;
+        }
+
+        .front-bottom {
+            padding: 10mm 15mm;
+            background: #f9f9f9;
+            border-top: 2px solid var(--color-heat);
+        }
+
+        .problems-2x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6mm;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 6mm;
+            border-radius: 2px;
+            border-left: 2px solid var(--color-heat);
+            font-size: 7px;
+        }
+
+        .problem-card h3 {
+            font-size: 8px;
+            color: var(--color-heat);
+            font-weight: bold;
+            margin-bottom: 2mm;
+        }
+
+        .problem-card p {
+            font-size: 7px;
+            color: var(--color-text);
+            line-height: 1.2;
+        }
+
+        /* Back Page */
+        .back {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 12mm;
+            background: white;
+        }
+
+        .back-section {
+            margin-bottom: 8mm;
+        }
+
+        .back-section h2 {
+            font-size: 11px;
+            color: var(--color-heat);
+            font-weight: bold;
+            margin-bottom: 5mm;
+            border-bottom: 1px solid var(--color-heat);
+            padding-bottom: 2mm;
+        }
+
+        .steps-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5mm;
+            margin-bottom: 8mm;
+        }
+
+        .step-card {
+            background: #f9f9f9;
+            padding: 5mm;
+            border-radius: 2px;
+            border-left: 2px solid var(--color-heat);
+            font-size: 6.5px;
+        }
+
+        .step-number {
+            background: var(--color-heat);
+            color: white;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 7px;
+            font-weight: bold;
+            margin-bottom: 3mm;
+        }
+
+        .step-card h3 {
+            font-size: 8px;
+            color: var(--color-dark);
+            margin-bottom: 2mm;
+            font-weight: bold;
+        }
+
+        .step-card p {
+            font-size: 6.5px;
+            color: var(--color-text);
+            line-height: 1.2;
+        }
+
+        .featured-project {
+            background: white;
+            border: 2px solid var(--color-heat);
+            border-radius: 3px;
+            padding: 6mm;
+            margin-bottom: 8mm;
+            font-size: 7px;
+        }
+
+        .featured-project h3 {
+            font-size: 10px;
+            color: var(--color-heat);
+            font-weight: bold;
+            margin-bottom: 3mm;
+        }
+
+        .project-meta {
+            font-size: 7px;
+            color: #999;
+            margin-bottom: 3mm;
+        }
+
+        .project-detail {
+            font-size: 7px;
+            color: var(--color-text);
+            line-height: 1.3;
+            margin-bottom: 2mm;
+        }
+
+        .benefits-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6mm;
+            margin-bottom: 8mm;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 4mm;
+            font-size: 7px;
+        }
+
+        .benefit-check {
+            color: var(--color-heat);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .benefit-text {
+            color: var(--color-text);
+            line-height: 1.2;
+        }
+
+        .benefit-text strong {
+            color: var(--color-dark);
+            display: block;
+            margin-bottom: 1mm;
+        }
+
+        .results-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5mm;
+            margin-bottom: 8mm;
+        }
+
+        .result-box {
+            text-align: center;
+            background: #f9f9f9;
+            padding: 5mm;
+            border-radius: 2px;
+            border-top: 2px solid var(--color-heat);
+        }
+
+        .result-number {
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--color-heat);
+            margin-bottom: 2mm;
+        }
+
+        .result-label {
+            font-size: 7px;
+            color: var(--color-text);
+            line-height: 1.2;
+        }
+
+        .back-footer {
+            border-top: 1px solid #ddd;
+            padding-top: 5mm;
+            margin-top: auto;
+            font-size: 6px;
+            color: #999;
+            text-align: center;
+        }
+
+        .back-footer p {
+            margin: 1mm 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== FRONT PAGE ===== -->
+    <div class="page front">
+        <div class="front-hero">
+            <h1>Is Heat Costing You Money?</h1>
+            <p>Internal temperatures affecting your facility's safety, productivity, and bottom line</p>
+            <button class="front-cta">GET FREE ASSESSMENT</button>
+        </div>
+
+        <div class="front-image">
+            [Industrial facility image - warehouse/manufacturing with heat load]
+        </div>
+
+        <div class="front-bottom">
+            <div class="problems-2x2">
+                <div class="problem-card">
+                    <h3>🔴 Personnel Health & Safety</h3>
+                    <p>Heat stress is a WorkSafe hazard. Prolonged exposure puts workers at risk.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>💰 Equipment Efficiency & Energy</h3>
+                    <p>Mechanical cooling is expensive. Poor ventilation adds thousands annually.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>📉 Productivity Loss</h3>
+                    <p>Sustained heat above 25°C reduces output, increases errors and fatigue.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>⚙️ Equipment Breakdown Risk</h3>
+                    <p>High temperatures reduce lifespan. Condensation causes corrosion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== BACK PAGE ===== -->
+    <div class="page back">
+        <div class="back-section">
+            <h2>How Natural Ventilation Works</h2>
+            <div class="steps-3">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Heat Load Assessment</h3>
+                    <p>Analyse your facility's heat sources, layout and thermal profile. On-site assessment if needed.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Design & Modelling</h3>
+                    <p>Computationally model existing conditions and expected outcomes before project commitment.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Supply & Install</h3>
+                    <p>Supply and install a high-performance natural ventilation system tailored to your facility.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-project">
+            <h3>Featured Project: BlueScope Steel MCL7</h3>
+            <div class="project-meta">📍 Erskine Park, NSW | 🏭 Steel Manufacturing | Large-span facility</div>
+            <div class="project-detail"><strong>Challenge:</strong> Extreme heat load impacting worker safety and equipment efficiency</div>
+            <div class="project-detail"><strong>Solution:</strong> 2 series E ridge vents with passive ventilation system</div>
+            <div class="project-detail">
+                <strong>Results:</strong> Internal temperatures reduced by 10°C | Zero ongoing operating costs | Resolved extreme heat load
+            </div>
+        </div>
+
+        <div class="back-section">
+            <h2>What You'll Achieve</h2>
+            <div class="benefits-section">
+                <div class="benefit-item">
+                    <div class="benefit-check">✓</div>
+                    <div class="benefit-text"><strong>Internal Temperature Reduction</strong>Passive system eliminates running costs</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-check">✓</div>
+                    <div class="benefit-text"><strong>Zero Energy System</strong>Passive solution with no running costs</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-check">✓</div>
+                    <div class="benefit-text"><strong>24/7 Automatic Cooling</strong>Works around the clock without intervention</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-check">✓</div>
+                    <div class="benefit-text"><strong>Minimal Maintenance</strong>No mechanical parts means no breakdowns</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-section">
+            <h2>Key Benefits</h2>
+            <div class="results-3">
+                <div class="result-box">
+                    <div class="result-number">10-15°C</div>
+                    <div class="result-label">Temperature Reduction on average across facility</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-number">30-40%</div>
+                    <div class="result-label">Energy Cost Savings annually</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-number">$0</div>
+                    <div class="result-label">Operating Costs for passive system</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-footer">
+            <p><strong>Airocle</strong> | Natural Ventilation Solutions</p>
+            <p>www.airocle.com.au | hello@airocle.com.au | +61 2 XXXX XXXX</p>
+        </div>
+    </div>
+
+</body>
+</html>

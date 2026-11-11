@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airocle DTI Brochure | Direct-to-Industry Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero-home {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-sky-blue) 100%);
+            color: white;
+            padding: 100px var(--spacing-2xl);
+            text-align: center;
+        }
+
+        .hero-home h1 {
+            font-size: 56px;
+            color: white;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-home p {
+            font-size: 20px;
+            margin-bottom: var(--spacing-2xl);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .problems-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-2xl);
+            padding: var(--spacing-2xl);
+        }
+
+        .problem-link {
+            background: white;
+            padding: var(--spacing-2xl);
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .problem-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .problem-link.heat {
+            border-left-color: var(--color-heat);
+        }
+
+        .problem-link h3 {
+            color: var(--color-heat);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .problem-link-icon {
+            font-size: 32px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-group {
+            margin-top: var(--spacing-2xl);
+            text-align: center;
+        }
+
+        .cta-group a {
+            display: inline-block;
+            margin: 0 var(--spacing-md);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero-home">
+        <h1>Airocle DTI Brochure</h1>
+        <p>Direct-to-Industry Problem-Specific Sales Solutions</p>
+        <p style="font-size: 14px; opacity: 0.8;">Customized landing pages and print-ready inserts for your sales team</p>
+    </section>
+
+    <!-- ===== PROBLEMS NAVIGATION ===== -->
+    <section class="light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industry Problems We Solve</h2>
+                <p>Select a problem to explore the full landing page and A4 one-pager</p>
+            </div>
+
+            <div class="problems-nav">
+                <a href="pages/heat.html" class="problem-link heat">
+                    <div class="problem-link-icon">🔴</div>
+                    <h3>Heat Load & Thermal Discomfort</h3>
+                    <p>Is heat costing you money? Excessive internal temperatures affecting safety, productivity, and equipment efficiency.</p>
+                    <div style="margin-top: 15px; font-size: 12px; color: var(--color-heat); font-weight: bold;">View Landing Page →</div>
+                </a>
+
+                <div class="problem-link" style="opacity: 0.6; background: #f5f5f5;">
+                    <div class="problem-link-icon">💨</div>
+                    <h3>Air Quality & Fumes</h3>
+                    <p>Dangerous fumes putting workers at risk. Coming soon...</p>
+                    <div style="margin-top: 15px; font-size: 12px; color: #999;">Coming Soon</div>
+                </div>
+
+                <div class="problem-link" style="opacity: 0.6; background: #f5f5f5;">
+                    <div class="problem-link-icon">💧</div>
+                    <h3>Condensation Control</h3>
+                    <p>Uncontrolled moisture damaging your facility. Coming soon...</p>
+                    <div style="margin-top: 15px; font-size: 12px; color: #999;">Coming Soon</div>
+                </div>
+
+                <div class="problem-link" style="opacity: 0.6; background: #f5f5f5;">
+                    <div class="problem-link-icon">⚙️</div>
+                    <h3>End-of-Life Replacement</h3>
+                    <p>Aging ventilators reaching end-of-life. Coming soon...</p>
+                    <div style="margin-top: 15px; font-size: 12px; color: #999;">Coming Soon</div>
+                </div>
+
+                <div class="problem-link" style="opacity: 0.6; background: #f5f5f5;">
+                    <div class="problem-link-icon">🔥</div>
+                    <h3>Smoke Management Compliance</h3>
+                    <p>Smoke hazard management system compliance. Coming soon...</p>
+                    <div style="margin-top: 15px; font-size: 12px; color: #999;">Coming Soon</div>
+                </div>
+            </div>
+
+            <div class="cta-group">
+                <a href="pages/heat.html" class="btn btn-dark">View Heat Landing Page</a>
+                <a href="inserts/heat-insert.html" class="btn btn-primary" style="background: var(--color-heat); color: white;">View Heat A4 Insert</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="grey">
+        <div class="container">
+            <div class="section-header">
+                <h2>How This Works</h2>
+                <p>A system for your sales team</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>🎯 Direct-to-Industry</h3>
+                    <p>Each landing page solves ONE specific problem your prospect is facing. No generic homepage — just the solution they need.</p>
+                </div>
+
+                <div class="card">
+                    <h3>📄 Print-Ready Insert</h3>
+                    <p>Matching A4 double-sided insert. Hand it over in a meeting or mail it. Professional, problem-focused, easy to understand.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🔄 Reusable System</h3>
+                    <p>Same structure for all 5 problems. Only the content changes. Easy to scale, easy to customize.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECT STRUCTURE ===== -->
+    <section class="light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Project Structure</h2>
+                <p>Organized for easy management and scaling</p>
+            </div>
+
+            <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; font-family: monospace; font-size: 13px; line-height: 1.8; color: #333;">
+                dtibrochure/<br>
+                ├── index.html &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (this page)<br>
+                ├── css/<br>
+                │   └── style.css &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (shared styles & colors)<br>
+                ├── pages/<br>
+                │   ├── heat.html &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Heat landing page)<br>
+                │   ├── fumes.html &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Fumes landing page - coming)<br>
+                │   └── ... (other problems)<br>
+                ├── inserts/<br>
+                │   ├── heat-insert.html &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Heat A4 double-sided)<br>
+                │   └── ... (other inserts)<br>
+                └── assets/<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── images/<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│   ├── heat/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Heat problem images)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│   └── ...<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── icons/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (SVG icons)<br>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>Airocle DTI Brochure System | Direct-to-Industry Sales Solutions</p>
+        <p>www.airocle.com.au | hello@airocle.com.au | +61 2 XXXX XXXX</p>
+    </footer>
+
+</body>
+</html>
