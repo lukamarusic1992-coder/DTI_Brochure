@@ -39,27 +39,33 @@
         }
 
         .theme-label {
-            font-size: 8px;
+            font-size: 7px;
             color: #4168B7;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-bottom: 8mm;
+            margin-bottom: 6mm;
+            display: inline-block;
+            padding: 3mm 6mm;
+            background: #F2F4F6;
+            border-radius: 2px;
         }
 
         .headline {
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 700;
             color: #112D3D;
-            line-height: 1.2;
-            margin-bottom: 4mm;
+            line-height: 1.15;
+            margin-bottom: 6mm;
+            margin-top: 5mm;
         }
 
         .intro-line {
             font-size: 10px;
             color: #252B30;
-            margin-bottom: 12mm;
-            line-height: 1.5;
+            margin-bottom: 14mm;
+            line-height: 1.6;
+            font-weight: 400;
         }
 
         .hero-image {
@@ -83,36 +89,43 @@
         }
 
         .problems-title {
-            font-size: 11px;
+            font-size: 12px;
             color: #112D3D;
-            font-weight: 600;
-            margin-bottom: 6mm;
-            border-bottom: 1px solid #C62828;
-            padding-bottom: 3mm;
+            font-weight: 700;
+            margin-bottom: 7mm;
+            border-bottom: 2px solid #C62828;
+            padding-bottom: 4mm;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .problems-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 5mm;
+            gap: 6mm;
         }
 
         .problem-point {
-            border-left: 2px solid #C62828;
-            padding-left: 6mm;
+            border-left: 3px solid #C62828;
+            padding-left: 7mm;
+            padding-top: 2mm;
+            padding-bottom: 2mm;
         }
 
         .problem-point h4 {
             font-size: 9px;
-            color: #112D3D;
-            font-weight: 600;
-            margin-bottom: 2mm;
+            color: #C62828;
+            font-weight: 700;
+            margin-bottom: 3mm;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .problem-point p {
             font-size: 8px;
             color: #252B30;
-            line-height: 1.3;
+            line-height: 1.4;
+            font-weight: 400;
         }
 
         .approach-section {
@@ -120,51 +133,58 @@
         }
 
         .approach-title {
-            font-size: 11px;
+            font-size: 12px;
             color: #112D3D;
-            font-weight: 600;
-            margin-bottom: 6mm;
-            border-bottom: 1px solid #4168B7;
-            padding-bottom: 3mm;
+            font-weight: 700;
+            margin-bottom: 7mm;
+            border-bottom: 2px solid #4168B7;
+            padding-bottom: 4mm;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .steps {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 4mm;
+            gap: 5mm;
         }
 
         .step {
-            background: #F2F4F6;
-            padding: 5mm;
-            border-radius: 2px;
+            background: white;
+            padding: 6mm;
+            border: 1px solid #E8E8E8;
+            border-radius: 3px;
+            text-align: center;
+            transition: all 0.2s;
         }
 
         .step-number {
-            width: 16px;
-            height: 16px;
+            width: 28px;
+            height: 28px;
             background: #4168B7;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 8px;
+            font-size: 10px;
             font-weight: bold;
-            margin-bottom: 3mm;
+            margin: 0 auto 4mm;
         }
 
         .step h5 {
             font-size: 8px;
             color: #112D3D;
-            font-weight: 600;
-            margin-bottom: 2mm;
+            font-weight: 700;
+            margin-bottom: 3mm;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .step p {
             font-size: 7px;
             color: #252B30;
-            line-height: 1.2;
+            line-height: 1.3;
         }
 
         /* BACK PAGE */
@@ -182,67 +202,78 @@
             grid-template-columns: 1fr 1fr;
             gap: 8mm;
             margin-bottom: 10mm;
-            background: white;
-            border: 1px solid #F2F4F6;
-            padding: 0;
+            background: #F2F4F6;
+            border: 1px solid #E8E8E8;
+            padding: 7mm;
             min-height: 90mm;
             flex: 1;
+            border-radius: 3px;
         }
 
         .project-image {
             width: 100%;
             height: 100%;
             min-height: 80mm;
-            background: #F2F4F6;
+            background: white;
             border: 2px dashed #999;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #999;
-            font-size: 10px;
+            font-size: 9px;
             text-align: center;
             padding: 8mm;
+            border-radius: 2px;
         }
 
         .project-content {
-            padding: 8mm;
+            padding: 7mm;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            background: white;
+            border-radius: 2px;
         }
 
         .project-header h3 {
-            font-size: 12px;
+            font-size: 13px;
             color: #112D3D;
             font-weight: 700;
-            margin-bottom: 2mm;
+            margin-bottom: 3mm;
+            border-bottom: 2px solid #C62828;
+            padding-bottom: 3mm;
         }
 
         .project-meta {
-            font-size: 8px;
-            color: #252B30;
-            margin-bottom: 5mm;
-            line-height: 1.3;
+            font-size: 7px;
+            color: #4168B7;
+            margin-bottom: 6mm;
+            line-height: 1.4;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .project-story {
             font-size: 8px;
             color: #252B30;
-            line-height: 1.4;
-            margin-bottom: 5mm;
+            line-height: 1.5;
+            margin-bottom: 6mm;
         }
 
         .project-story strong {
             color: #C62828;
+            font-weight: 700;
         }
 
         .project-result {
-            font-size: 9px;
+            font-size: 8px;
             color: #112D3D;
             font-weight: 600;
-            padding: 5mm;
+            padding: 6mm;
             background: #F2F4F6;
-            border-left: 2px solid #C62828;
+            border-left: 3px solid #C62828;
+            border-radius: 2px;
         }
 
         .benefits-section {
@@ -250,31 +281,34 @@
         }
 
         .benefits-title {
-            font-size: 11px;
+            font-size: 12px;
             color: #112D3D;
-            font-weight: 600;
-            margin-bottom: 5mm;
-            border-bottom: 1px solid #4168B7;
-            padding-bottom: 3mm;
+            font-weight: 700;
+            margin-bottom: 6mm;
+            border-bottom: 2px solid #4168B7;
+            padding-bottom: 4mm;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .benefits-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6mm;
+            gap: 7mm;
         }
 
         .benefit {
             display: flex;
-            gap: 4mm;
+            gap: 5mm;
             font-size: 8px;
-            line-height: 1.3;
+            line-height: 1.4;
         }
 
         .benefit-check {
             color: #C62828;
             font-weight: bold;
             flex-shrink: 0;
+            font-size: 10px;
         }
 
         .benefit-text {
@@ -284,27 +318,31 @@
         .benefit-text strong {
             color: #112D3D;
             display: block;
-            margin-bottom: 1mm;
+            margin-bottom: 2mm;
+            font-weight: 700;
         }
 
         .cta-section {
             background: #112D3D;
             color: white;
             padding: 8mm;
-            border-radius: 2px;
+            border-radius: 3px;
             text-align: center;
             margin-top: auto;
+            border-top: 3px solid #C62828;
         }
 
         .cta-text {
-            font-size: 9px;
-            margin-bottom: 4mm;
-            line-height: 1.4;
+            font-size: 10px;
+            margin-bottom: 5mm;
+            line-height: 1.5;
+            font-weight: 600;
         }
 
         .contact-details {
             font-size: 8px;
-            line-height: 1.4;
+            line-height: 1.5;
+            font-weight: 400;
         }
 
         /* WIREFRAME LABELS */
